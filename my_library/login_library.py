@@ -2,6 +2,7 @@
 import json
 import os
 from robot.api.deco import keyword
+
 # This is to read the Json file under Utility
 test_data_path = os.path.join(os.path.dirname(__file__),
                               "..",
@@ -9,7 +10,8 @@ test_data_path = os.path.join(os.path.dirname(__file__),
                               "locators.json")
 with open(test_data_path, 'r') as file_path:
     data = json.load(file_path)
-
+  
+# This is to read the json file
 @keyword("Read Test Data")
 def read_test_data():
     return data
@@ -48,6 +50,7 @@ def read_error_message_locator():
 @keyword("Invalid_Credentials")
 def read_credentials():
     return data["Credentials"]["invalid"][0]
+
 
 
 
