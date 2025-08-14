@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.wait import WebDriverWait
+
 # This is to read the Json file under Utility
 test_data_path = os.path.join(os.path.dirname(__file__),
                               "..",
@@ -14,30 +15,37 @@ test_data_path = os.path.join(os.path.dirname(__file__),
                               "locators.json")
 with open(test_data_path, 'r') as file_path:
     data = json.load(file_path)
+  
 # This is the User-Defined Keyword that reads the valid user credentials
 @keyword("Credentials")
 def read_credentials():
     return data["Credentials"]["valid"][0]
+  
 # This is the User-Defined Keyword that reads the locator of drop down element
 @keyword("Drop Down")
 def read_drop_down():
     return data["Products"]["select"][1]
+  
 # This is the User-Defined Keyword that reads the locator of Add to cart element
 @keyword("Add Cart")
 def read_add_cart():
     return data["Cart"]["add_element"][1]
+  
 # This is the User-Defined Keyword that reads the locator that selects the first product in the particular filter
 @keyword("Actual Item Name")
 def read_item_name():
     return data["Item_Name"]["item"][1]
+  
 # This is the User-Defined Keyword that reads the locator to click on Cart Icon
 @keyword("Click On Cart")
 def read_cart_locator():
     return data["Cart_link"]["cart"][1]
+  
 # This is the User-Defined Keyword that reads the locator of the selected product in the cart
 @keyword("Cart Item Name")
 def read_cart_item_name():
     return data["Cart_Item"]["cart_item"][1]
+  
 # This is the User-Defined Keyword that reads the locator to click on Check Out Button
 @keyword("Check Out")
 def read_check_out_locator():
@@ -91,6 +99,7 @@ def add_multiple_products():
         )
     else:
         print(f"Cart Items Matches\nExpected: {selected_items}\nActual: {added_items}")
+
 
 
 
