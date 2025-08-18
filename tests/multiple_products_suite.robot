@@ -9,7 +9,7 @@ Documentation    This test suite verifies login functionality, Then Add Products
 
 
 *** Test Cases ***
-Add A Product And Verify The Product
+Add Multiple Products And Verify The Product
     [Documentation]    This Test Verifies the Multiple Product Adding, Verifying and Checkout.
     Navigate To Application
     Input Credentials
