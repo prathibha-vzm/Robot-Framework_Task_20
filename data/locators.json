@@ -1,0 +1,45 @@
+{
+  "URL"            :{
+    "login_url"    : "https://www.saucedemo.com/"
+  },
+  "Login_Element"  : {
+    "username_field"  : ["XPATH","//input[@id='user-name']"],
+    "password_field"  : ["XPATH","//input[@id='password']"],
+    "login_button": ["XPATH","//input[@id='login-button']"]
+  },
+  "Error_Message": {
+    "error_text": ["XPATH","//h3[@data-test='error']"]
+  },
+  "Credentials": {
+     "valid":[
+  {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  }
+       ],
+  "invalid": [
+  {
+    "username": "locked_user",
+    "password": "secret_sauce"
+  }
+]
+},
+  "Products": {
+    "select": ["XPATH","//select[@class='product_sort_container']"]
+  },
+  "Cart": {
+    "add_element": ["XPATH","//button[@class='btn btn_primary btn_small btn_inventory ']"]
+  },
+  "Item_Name": {
+    "item": ["XPATH","(//div[@class='inventory_list']//div[@class='inventory_item']//div[1]//div[@class='inventory_item_name '])[1]"]
+  },
+  "Cart_link": {
+    "cart": ["XPATH","//a[@data-test='shopping-cart-link']"]
+  } ,
+  "Cart_Item": {
+    "cart_item": ["XPATH","//div[@class='cart_item']//div[@class='inventory_item_name']"]
+  },
+  "Check_Out": {
+    "check_out": ["XPATH","//button[@id='checkout']"]
+  }
+}
